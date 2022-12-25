@@ -1,5 +1,3 @@
-using System;
-
 namespace VacationReservationProject.Models
 {
     public class ErrorViewModel
