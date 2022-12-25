@@ -10,5 +10,11 @@ namespace BusinessLayer.ValidationRules
 {
     public class AboutValidator : AbstractValidator<About>
     {
+        public AboutValidator()
+        {
+            RuleFor(x => x.Description).NotEmpty().WithMessage("Açıklama Kısmını Boş Geçemezsiniz");
+            RuleFor(x => x.Image1).NotEmpty().WithMessage("Lütfen Görsel Seçiniz");
+            RuleFor(x => x.Description).MaximumLength(1500).WithMessage("Lütfen açıklamayı kısaltın");
+        }
     }
 }
